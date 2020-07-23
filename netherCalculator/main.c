@@ -15,11 +15,11 @@ int main() {
 
 		if ('o' == choice) {
 
-			printf("Input x overworld test: \n");
+			printf("Input x overworld coordinates: \n");
 			scanf_s("%lf", &x);
-			printf("Input y overworld coorodinate: \n");
+			printf("Input y overworld coordinates: \n");
 			scanf_s("%lf", &y);
-			printf("Input z overworld coordinate: \n");
+			printf("Input z overworld coordinates: \n");
 			scanf_s("%lf", &z);
 
 			printf("Results in nether: \n");
