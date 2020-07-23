@@ -15,7 +15,7 @@ int main() {
 
 		if ('o' == choice) {
 
-			printf("Input x overworld cooordinate: \n");
+			printf("Input x overworld cooordinadte: \n");
 			scanf_s("%lf", &x);
 			printf("Input y overworld coorodinate: \n");
 			scanf_s("%lf", &y);
