@@ -11,8 +11,8 @@ int main() {
 		printf("o - overworld coordinates\n");
 		printf("n - nether coordinates\n");
 		printf("q - quit\n");
-		scanf_s("%s", &choice, 1);
-
+		scanf_s("%c", &choice, 1);
+		
 		if ('o' == choice) {
 
 			printf("Input x overworld coordinates: \n");
