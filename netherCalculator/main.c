@@ -4,15 +4,17 @@
 
 int main() {
 
-	do {
+	while(1) {
 		double x, y, z, rx, ry, rz;
 		char choice;
+		fflush(stdin);
+		choice = fgets(choice, sizeof(choice), stdin);
+
 		printf("What do you want to input?\n");
 		printf("o - overworld coordinates\n");
 		printf("n - nether coordinates\n");
 		printf("q - quit\n");
 		scanf_s("%c", &choice, 1);
-		
 		if ('o' == choice) {
 
 			printf("Input x overworld coordinates: \n");
@@ -33,7 +35,7 @@ int main() {
 			printf("Y:%0.1lf\n", ry);
 			printf("Z:%0.1lf\n", rz);
 		}
-		if (choice == 'n') {
+		else if (choice == 'n') {
 			printf("Input x nether coordinate: \n");
 			scanf_s("%lf", &x);
 			printf("Input y nether coordinate: \n");
@@ -52,11 +54,14 @@ int main() {
 			printf("Y:%0.1lf\n", ry);
 			printf("Z:%0.1lf\n", rz);
 		}
-		if (choice == 'q') {
+		else if (choice == 'q') {
 			break;
+		}
+		else {
+			printf("Wrong input");
 		}
 
 
-	} while (1);
+	}
 	return 0;
 }
