@@ -2,19 +2,33 @@
 #include <math.h>
 #include <string.h>
 
-int main() {
 
+char GetStuff(void) {
+	char c;
+	scanf_s("%c", &c, 1);
+	getchar();
+	while ((c != 'o') && (c != 'n') && (c != 'q')) {
+		printf("invalid input, enter again: ");
+		scanf_s("%c", &c, 1);
+		getchar();
+	}
+	return c;
+}
+
+
+
+int main() {
+	printf("What do you want to input?\n");
+	printf("o - overworld coordinates\n");
+	printf("n - nether coordinates\n");
+	printf("q - quit\n");
 	while(1) {
 		double x, y, z, rx, ry, rz;
-		char choice;
-		fflush(stdin);
-		choice = fgets(choice, sizeof(choice), stdin);
+		char choice = GetStuff();
 
-		printf("What do you want to input?\n");
-		printf("o - overworld coordinates\n");
-		printf("n - nether coordinates\n");
-		printf("q - quit\n");
-		scanf_s("%c", &choice, 1);
+
+
+
 		if ('o' == choice) {
 
 			printf("Input x overworld coordinates: \n");
